@@ -1,0 +1,31 @@
+{
+  "name": "Java 21 Workshop Env",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "lts"
+    },
+    "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {
+      "version": "latest",
+      "enableNonRootDocker": "true",
+      "moby": "true"
+    }
+  },
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "app",
+  "workspaceFolder": "/work",
+  "remoteUser": "vscode",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "redhat.java",
+        "vscjava.vscode-java-dependency",
+        "vscjava.vscode-maven",
+        "vscjava.vscode-java-debug",
+        "vscjava.vscode-java-test",
+        "ms-azuretools.vscode-docker"
+      ]
+    }
+  },
+  // Simple check to confirm everything is up
+  "postCreateCommand": "sudo chown -R vscode:vscode /home/vscode/.m2 /home/vscode/.npm && npm install -g @modelcontextprotocol/server-filesystem && echo 'Environment Ready! Kafka: kafka:9092 | DB: db:5432'"
+}

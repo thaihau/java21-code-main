@@ -1,0 +1,10 @@
+/work/lab-02-modern-java/src/main/java/com/course/lab02/loom/BlockingTask.java
+/work/lab-02-modern-java/src/main/java/com/course/lab02/loom/LoomSimulation.java
+/work/lab-02-modern-java/src/main/java/com/course/lab02/modern/LegacyTransaction.java
+/work/lab-02-modern-java/src/main/java/com/course/lab02/modern/ModernTransaction.java
+/work/lab-02-modern-java/src/main/java/com/course/lab02/patterns/Events.java
+/work/lab-02-modern-java/src/main/java/com/course/lab02/patterns/LegacyProcessor.java
+/work/lab-02-modern-java/src/main/java/com/course/lab02/patterns/ModernProcessor.java
+/work/lab-02-modern-java/src/main/java/com/course/lab02/sealed/AuthService.java
+/work/lab-02-modern-java/src/main/java/com/course/lab02/sealed/LegacyAuth.java
+/work/lab-02-modern-java/src/main/java/com/course/lab02/sealed/SealedAuth.java

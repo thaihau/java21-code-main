@@ -1,0 +1,20 @@
+{
+  // existing setting — keeps VS Code asking before reloading project build
+  "java.configuration.updateBuildConfiguration": "automatic",
+
+  // ✅ ensure full Java language server starts automatically
+  "java.server.launchMode": "Standard",
+
+  // ✅ since you’re Maven-only, disable Gradle to speed startup
+  "java.import.gradle.enabled": false,
+
+  // ✅ make sure Maven importer runs on open
+  "java.import.maven.enabled": true,
+
+  // ✅ tell VS Code which executable to use inside devcontainer/codespace
+  "maven.executable.path": "mvn",
+
+  // optional: cleaner terminal output when running/debugging Java
+  "java.debug.settings.console": "integratedTerminal",
+  "java.compile.nullAnalysis.mode": "disabled"
+}

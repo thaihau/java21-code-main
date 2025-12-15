@@ -1,0 +1,9 @@
+/work/lab-04-microservices/inventory-service/src/main/java/com/richardlearning/inventory/InventoryApplication.java
+/work/lab-04-microservices/inventory-service/src/main/java/com/richardlearning/inventory/InventoryController.java
+/work/lab-04-microservices/inventory-service/src/main/java/com/richardlearning/inventory/InventoryEventListener.java
+/work/lab-04-microservices/inventory-service/src/main/java/com/richardlearning/inventory/InventoryRepository.java
+/work/lab-04-microservices/inventory-service/src/main/java/com/richardlearning/inventory/InventoryRequest.java
+/work/lab-04-microservices/inventory-service/src/main/java/com/richardlearning/inventory/OrderPlacedEvent.java
+/work/lab-04-microservices/inventory-service/src/main/java/com/richardlearning/inventory/ProcessedEvent.java
+/work/lab-04-microservices/inventory-service/src/main/java/com/richardlearning/inventory/ProcessedEventRepository.java
+/work/lab-04-microservices/inventory-service/src/main/java/com/richardlearning/inventory/Product.java

@@ -1,0 +1,11 @@
+com/richardlearning/order/Outbox.class
+com/richardlearning/order/OrderController.class
+com/richardlearning/order/OutboxRepository.class
+com/richardlearning/order/OrderPoller.class
+com/richardlearning/order/OrderRepository.class
+com/richardlearning/order/OrderService.class
+com/richardlearning/order/OrderApplication.class
+com/richardlearning/order/OrderRequest.class
+com/richardlearning/order/Order.class
+com/richardlearning/order/InventoryClient.class
+com/richardlearning/order/OrderPlacedEvent.class

@@ -1,0 +1,11 @@
+/work/lab-04-microservices/order-service/src/main/java/com/richardlearning/order/InventoryClient.java
+/work/lab-04-microservices/order-service/src/main/java/com/richardlearning/order/Order.java
+/work/lab-04-microservices/order-service/src/main/java/com/richardlearning/order/OrderApplication.java
+/work/lab-04-microservices/order-service/src/main/java/com/richardlearning/order/OrderController.java
+/work/lab-04-microservices/order-service/src/main/java/com/richardlearning/order/OrderPlacedEvent.java
+/work/lab-04-microservices/order-service/src/main/java/com/richardlearning/order/OrderPoller.java
+/work/lab-04-microservices/order-service/src/main/java/com/richardlearning/order/OrderRepository.java
+/work/lab-04-microservices/order-service/src/main/java/com/richardlearning/order/OrderRequest.java
+/work/lab-04-microservices/order-service/src/main/java/com/richardlearning/order/OrderService.java
+/work/lab-04-microservices/order-service/src/main/java/com/richardlearning/order/Outbox.java
+/work/lab-04-microservices/order-service/src/main/java/com/richardlearning/order/OutboxRepository.java

@@ -1,0 +1,9 @@
+com/richardlearning/inventory/InventoryRequest.class
+com/richardlearning/inventory/Product.class
+com/richardlearning/inventory/ProcessedEvent.class
+com/richardlearning/inventory/InventoryController.class
+com/richardlearning/inventory/InventoryRepository.class
+com/richardlearning/inventory/ProcessedEventRepository.class
+com/richardlearning/inventory/InventoryEventListener.class
+com/richardlearning/inventory/InventoryApplication.class
+com/richardlearning/inventory/OrderPlacedEvent.class

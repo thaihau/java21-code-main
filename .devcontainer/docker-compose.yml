@@ -1,0 +1,71 @@
+version: '3.8'
+
+services:
+  # 1. The Student's Workspace (Java + Tools)
+  app:
+    image: ghcr.io/richard-learning/java21-base:stable
+    container_name: java-learner
+    command: sleep infinity
+    volumes:
+      - ..:/work                  # Mounts the repo code
+      - maven-repo:/home/vscode/.m2 # Caches Maven downloads
+    networks:
+      - lab-net
+    # MODULE 5 PREP: This loads secrets from a local file
+    env_file:
+      - .env
+
+  # 2. Kafka (Module 3) - KRaft Mode
+  kafka:
+    image: apache/kafka:3.7.0
+    container_name: kafka-broker
+    hostname: kafka
+    networks:
+      - lab-net
+    ports:
+      - "9092:9092"
+      - "29092:29092"
+    environment:
+      KAFKA_NODE_ID: 1
+      KAFKA_PROCESS_ROLES: broker,controller
+      KAFKA_CONTROLLER_LISTENER_NAMES: CONTROLLER
+
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: CONTROLLER:PLAINTEXT,INTERNAL:PLAINTEXT,EXTERNAL:PLAINTEXT
+      KAFKA_LISTENERS: INTERNAL://0.0.0.0:9092,EXTERNAL://0.0.0.0:29092,CONTROLLER://0.0.0.0:9093
+      KAFKA_ADVERTISED_LISTENERS: INTERNAL://kafka:9092,EXTERNAL://localhost:29092
+
+      # Critical when you have >1 broker listener
+      KAFKA_INTER_BROKER_LISTENER_NAME: INTERNAL
+
+      KAFKA_CONTROLLER_QUORUM_VOTERS: 1@kafka:9093
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
+      KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
+      KAFKA_GROUP_INITIAL_REBALANCE_DELAY_MS: 0
+      KAFKA_LOG_DIRS: /tmp/kraft-combined-logs
+
+      # Only needed if you insist on advertising host.docker.internal
+      # extra_hosts:
+      #   - "host.docker.internal:host-gateway"
+
+
+  # 3. Postgres Database (Module 4)
+  db:
+    image: postgres:15-alpine
+    container_name: microservice-db
+    networks:
+      - lab-net
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: training_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+
+volumes:
+  maven-repo:
+
+networks:
+  lab-net:
